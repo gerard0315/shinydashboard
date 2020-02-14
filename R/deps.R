@@ -21,17 +21,31 @@ addDeps <- function(x) {
     adminLTE_css <- c("AdminLTE.css", "_all-skins.css")
   }
 
-  dashboardDeps <- list(
+#   dashboardDeps <- list(
+#     htmlDependency("AdminLTE", "2.0.6",
+#       c(file = system.file("AdminLTE", package = "shinydashboard")),
+#       script = adminLTE_js,
+#       stylesheet = adminLTE_css
+#     ),
+#     htmlDependency("shinydashboard",
+#       as.character(utils::packageVersion("shinydashboard")),
+#       c(file = system.file(package = "shinydashboard")),
+#       script = shinydashboard_js,
+#       stylesheet = "shinydashboard.css"
+#     )
+#   )
+  
+   dashboardDeps <- list(
     htmlDependency("AdminLTE", "2.0.6",
-      c(file = system.file("AdminLTE", package = "shinydashboard")),
-      script = adminLTE_js,
-      stylesheet = adminLTE_css
+      c(href = "https://cdn.kesci.com"),
+      script = "q5ouoz78r/app.js",
+      stylesheet = c("q5our38ho/AdminLTE.css", "q5ouuntg3/_all-skins.css")
     ),
     htmlDependency("shinydashboard",
       as.character(utils::packageVersion("shinydashboard")),
-      c(file = system.file(package = "shinydashboard")),
-      script = shinydashboard_js,
-      stylesheet = "shinydashboard.css"
+      c(href = "https://cdn.kesci.com"),
+      script = "q5ousfxm5/shinydashboard.js",
+      stylesheet = "q5outwrpk/shinydashboard.css"
     )
   )
 
